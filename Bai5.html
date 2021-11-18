@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label><input type="text" id="input"></label>
+<button onclick="display()" > Chòm sao bên em</button>
+<!--<h1 id="r"></h1>-->
+</body>
+<script>
+    let star = [ "Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let star2 = ["Ursa", "Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa", "Major", "Leo"];
+    function display() {
+        let stars = document.getElementById("input").value
+        let flag = false
+        let index = 0
+        for (let i = 0; i < star2.length; i++) {
+            if (stars === star2[i]) {
+                flag = true
+                index = star[i]
+                break
+            }
+            if (stars === star[i]) {
+                flag = true
+                index = star2[i]
+                break
+            }
+
+         } if (flag) {
+                document.write("chòm sao tương ứng: " + index )
+            }else  {
+                document.write("Không tìm thấy")
+
+        }
+
+
+    }
+</script>
+</html>

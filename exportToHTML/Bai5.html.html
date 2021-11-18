@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>Bai5.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bbbbbb;}
+.s1 { color: #d19a66; font-style: italic;}
+.s2 { color: #ef596f;}
+.s3 { color: #89ca78;}
+.s4 { color: #5c6370; font-style: italic;}
+.s5 { color: #d55fde; font-style: italic;}
+.s6 { color: #d19a66;}
+</style>
+</head>
+<body bgcolor="#282c34">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Bai5.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;!DOCTYPE </span><span class="s1">html</span><span class="s0">&gt;</span>
+<span class="s0">&lt;</span><span class="s2">html </span><span class="s1">lang</span><span class="s3">=&quot;en&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;</span><span class="s2">head</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;</span><span class="s2">meta </span><span class="s1">charset</span><span class="s3">=&quot;UTF-8&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;</span><span class="s2">title</span><span class="s0">&gt;Title&lt;/</span><span class="s2">title</span><span class="s0">&gt;</span>
+<span class="s0">&lt;/</span><span class="s2">head</span><span class="s0">&gt;</span>
+<span class="s0">&lt;</span><span class="s2">body</span><span class="s0">&gt;</span>
+<span class="s0">&lt;</span><span class="s2">label</span><span class="s0">&gt;&lt;</span><span class="s2">input </span><span class="s1">type</span><span class="s3">=&quot;text&quot; </span><span class="s1">id</span><span class="s3">=&quot;input&quot;</span><span class="s0">&gt;&lt;/</span><span class="s2">label</span><span class="s0">&gt;</span>
+<span class="s0">&lt;</span><span class="s2">button </span><span class="s1">onclick</span><span class="s3">=&quot;</span><span class="s0">display()</span><span class="s3">&quot; </span><span class="s0">&gt; Chòm sao bên em&lt;/</span><span class="s2">button</span><span class="s0">&gt;</span>
+<span class="s4">&lt;!--&lt;h1 id=&quot;r&quot;&gt;&lt;/h1&gt;--&gt;</span>
+<span class="s0">&lt;/</span><span class="s2">body</span><span class="s0">&gt;</span>
+<span class="s0">&lt;</span><span class="s2">script</span><span class="s0">&gt;</span>
+    <span class="s5">let </span><span class="s0">star = [ </span><span class="s3">&quot;Polaris&quot;</span><span class="s0">, </span><span class="s3">&quot;Aldebaran&quot;</span><span class="s0">, </span><span class="s3">&quot;Deneb&quot;</span><span class="s0">, </span><span class="s3">&quot;Vega&quot;</span><span class="s0">, </span><span class="s3">&quot;Altair&quot;</span><span class="s0">, </span><span class="s3">&quot;Dubhe&quot;</span><span class="s0">, </span><span class="s3">&quot;Regulus&quot;</span><span class="s0">];</span>
+    <span class="s5">let </span><span class="s0">star2 = [</span><span class="s3">&quot;Ursa&quot;</span><span class="s0">, </span><span class="s3">&quot;Minor&quot;</span><span class="s0">, </span><span class="s3">&quot;Tarurus&quot;</span><span class="s0">, </span><span class="s3">&quot;Cygnus&quot;</span><span class="s0">, </span><span class="s3">&quot;Lyra&quot;</span><span class="s0">, </span><span class="s3">&quot;Aquila&quot;</span><span class="s0">, </span><span class="s3">&quot;Ursa&quot;</span><span class="s0">, </span><span class="s3">&quot;Major&quot;</span><span class="s0">, </span><span class="s3">&quot;Leo&quot;</span><span class="s0">];</span>
+    <span class="s5">function </span><span class="s0">display() {</span>
+        <span class="s5">let </span><span class="s0">stars = document.getElementById(</span><span class="s3">&quot;input&quot;</span><span class="s0">).value</span>
+        <span class="s5">let </span><span class="s0">flag = </span><span class="s5">false</span>
+        <span class="s5">let </span><span class="s0">index = </span><span class="s6">0</span>
+        <span class="s5">for </span><span class="s0">(</span><span class="s5">let </span><span class="s0">i = </span><span class="s6">0</span><span class="s0">; i &lt; star2.length; i++) {</span>
+            <span class="s5">if </span><span class="s0">(stars === star2[i]) {</span>
+                <span class="s0">flag = </span><span class="s5">true</span>
+                <span class="s0">index = star[i]</span>
+                <span class="s5">break</span>
+            <span class="s0">}</span>
+            <span class="s5">if </span><span class="s0">(stars === star[i]) {</span>
+                <span class="s0">flag = </span><span class="s5">true</span>
+                <span class="s0">index = star2[i]</span>
+                <span class="s5">break</span>
+            <span class="s0">}</span>
+
+         <span class="s0">} </span><span class="s5">if </span><span class="s0">(flag) {</span>
+                <span class="s0">document.write(</span><span class="s3">&quot;chòm sao tương ứng: &quot; </span><span class="s0">+ index )</span>
+            <span class="s0">}</span><span class="s5">else  </span><span class="s0">{</span>
+                <span class="s0">document.write(</span><span class="s3">&quot;Không tìm thấy&quot;</span><span class="s0">)</span>
+
+        <span class="s0">}</span>
+
+
+    <span class="s0">}</span>
+<span class="s0">&lt;/</span><span class="s2">script</span><span class="s0">&gt;</span>
+<span class="s0">&lt;/</span><span class="s2">html</span><span class="s0">&gt;</span></pre>
+</body>
+</html>

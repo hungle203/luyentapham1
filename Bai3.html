@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = +prompt("Nhập vào tham số 1")
+    let number2 = +prompt("Nhập vào tham số thứ 2")
+
+    function display(num1,num2) {
+          if (num1 > num2) {
+              alert("Đừng nhìn nữa")
+          }else if (num1 <= num2) {
+            return num1 + num2
+          }
+    }
+    display(number,number2)
+    let sum = display()
+    document.write (sum)
+
+</script>
+</body>
+</html>
